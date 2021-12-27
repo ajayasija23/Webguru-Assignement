@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#e9f5f6"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+        <RelativeLayout android:id="@+id/rlNoInternet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <ImageView android:id="@+id/ivNoSignal"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_140sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_80sdp"
+                android:src="@drawable/no_signal"
+                />
+            <TextView android:id="@+id/tvNoInternetTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_internet_connection"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/ivNoSignal"
+                android:fontFamily="@font/poppins_semibold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:layout_marginTop="@dimen/_40sdp"
+                />
+            <TextView android:id="@+id/tvNoInternetDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please connect to internet and pull to reload the page"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvNoInternetTitle"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
